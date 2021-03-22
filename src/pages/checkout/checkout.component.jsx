@@ -12,8 +12,9 @@ import {
 
 import './checkout.styles.scss';
 
-const CheckoutPage = ({ cartItems, total }) => (
-  <div className='checkout-page'>
+const CheckoutPage = ({ cartItems, total }) => {
+  return(
+    <div className='checkout-page'>
     <div className='checkout-header'>
       <div className='header-block'>
         <span>Product</span>
@@ -42,7 +43,9 @@ const CheckoutPage = ({ cartItems, total }) => (
     </div>
     <StripeCheckoutButton price={total} />
   </div>
-);
+  )
+}
+  
 
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems,

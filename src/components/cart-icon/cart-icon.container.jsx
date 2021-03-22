@@ -18,7 +18,8 @@ const GET_ITEM_COUNT = gql`
 `
 
 
-function CartIconConatiner() {
+function CartIconConatiner(props) {
+
     return (
         <Query query={GET_ITEM_COUNT}>
         {
@@ -33,6 +34,7 @@ function CartIconConatiner() {
         </Query>
         
     )
+
 }
 
-export default flowRight()(CartIconConatiner)
+export default CartIconConatiner
